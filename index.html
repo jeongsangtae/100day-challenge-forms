@@ -4,13 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Forms</title>
   </head>
   <body>
     <form action="/" method="GET">
-      <input type="text" name="user-name" />
-      <button>Save</button>
+      <label for="username">Your name</label>
+      <input type="text" name="user-name" id="username" />
+      <label for="useremail">Your email address plz</label>
+      <input type="email" name="user-email" id="useremail" />
+      <label for="userage">Your age?</label>
+      <input type="number" step="1" name="user-age" id="userage" />
+      <label for="userpassword">Your password</label>
+      <input type="password" name="user-password" id="userpassword" />
+      <label for="birthdate">Your birthdate</label>
+      <input type="date" name="user-birthdate" id="birthdate" />
+      <hr />
+      <h2>How should we verify your account?</h2>
+      <div class="form-controu-inline">
+        <input
+          type="radio"
+          name="verify"
+          id="verify-text-massage"
+          value="text-massage"
+        />
+        <label for="verify-text-massage">Via text message (SMS)</label>
+      </div>
+      <div>
+        <input type="radio" name="verify" id="verify-phone" value="phone" />
+        <label for="verify-phone">Via a phone call</label>
+      </div>
+      <div>
+        <input type="radio" name="verify" id="verify-email" value="email" />
+        <label for="verify-email">Via an email</label>
+      </div>
+
+      <button>Submit</button>
     </form>
   </body>
 </html>
