@@ -14,38 +14,156 @@
     <title>Forms</title>
   </head>
   <body>
-    <form action="/" method="GET">
-      <label for="username">Your name</label>
-      <input type="text" name="user-name" id="username" />
-      <label for="useremail">Your email address plz</label>
-      <input type="email" name="user-email" id="useremail" />
-      <label for="userage">Your age?</label>
-      <input type="number" step="1" name="user-age" id="userage" />
-      <label for="userpassword">Your password</label>
-      <input type="password" name="user-password" id="userpassword" />
-      <label for="birthdate">Your birthdate</label>
-      <input type="date" name="user-birthdate" id="birthdate" />
-      <hr />
-      <h2>How should we verify your account?</h2>
-      <div class="form-controu-inline">
-        <input
-          type="radio"
-          name="verify"
-          id="verify-text-massage"
-          value="text-massage"
-        />
-        <label for="verify-text-massage">Via text message (SMS)</label>
-      </div>
-      <div>
-        <input type="radio" name="verify" id="verify-phone" value="phone" />
-        <label for="verify-phone">Via a phone call</label>
-      </div>
-      <div>
-        <input type="radio" name="verify" id="verify-email" value="email" />
-        <label for="verify-email">Via an email</label>
-      </div>
+    <header>
+      <h1>Form</h1>
+    </header>
+    <main>
+      <form action="/" method="GET">
+        <section>
+          <h2>Your personal details</h2>
+          <ul>
+            <li>
+              <label for="username">Your name</label>
+              <input
+                type="text"
+                name="user-name"
+                id="username"
+                required
+                placeholder="Jeong Sane Tae"
+              />
+            </li>
+            <li>
+              <label for="useremail">Your email address plz</label>
+              <input type="email" name="user-email" id="useremail" required />
+            </li>
+            <li>
+              <label for="userpassword">Your password</label>
+              <input
+                type="password"
+                name="user-password"
+                id="userpassword"
+                required
+                minlength="8"
+              />
+            </li>
+          </ul>
+        </section>
 
-      <button>Submit</button>
-    </form>
+        <section>
+          <h2>More details</h2>
+          <ul>
+            <li>
+              <label for="userage">Your age?</label>
+              <input
+                type="number"
+                step="1"
+                name="user-age"
+                id="userage"
+                required
+                min="18"
+                max="100"
+              />
+            </li>
+            <li>
+              <label for="birthdate">Your birthdate</label>
+              <input
+                type="date"
+                name="user-birthdate"
+                id="birthdate"
+                required
+                min="1991-01-01"
+                max="2003-01-01"
+              />
+            </li>
+            <li>
+              <label for="favoritecolor">Your favorite color?</label>
+              <select name="favorite-color" id="favoritecolor">
+                <option value="grey">Grey</option>
+                <option value="black">Black</option>
+                <option value="red">Red</option>
+              </select>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <label for="usermassage">Your message</label>
+          <textarea name="user-massage" id="usermassage" rows="8"></textarea>
+        </section>
+
+        <section>
+          <h2>How should we verify your account?</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-text-massage"
+                value="text-massage"
+                required
+              />
+              <label for="verify-text-massage">Via text message (SMS)</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-phone"
+                value="phone"
+                required
+              />
+              <label for="verify-phone">Via a phone call</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-email"
+                value="email"
+                required
+              />
+              <label for="verify-email">Via an email</label>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>How should we contact you?</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input
+                type="checkbox"
+                id="contact-email"
+                name="contact"
+                value="email"
+              />
+              <label for="contact-email">Contect me via email</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="checkbox"
+                id="contact-phone"
+                name="contact"
+                value="phone"
+              />
+              <label for="contact-phone">Contect me via phone</label>
+            </li>
+          </ul>
+        </section>
+
+        <hr />
+
+        <section>
+          <div class="form-control-inline">
+            <input type="checkbox" id="agree-terms" name="terms" />
+            <label for="agree-terms">Agree to terms?</label>
+          </div>
+        </section>
+
+        <section>
+          <button type="submit">Submit</button>
+        </section>
+      </form>
+    </main>
   </body>
 </html>
