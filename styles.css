@@ -74,3 +74,22 @@ button:hover {
   width: auto;
   margin-right: 0.5rem;
 }
+
+.challenge {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-color: rgb(26, 8, 48);
+}
+
+a:hover {
+  color: rgb(226, 204, 204);
+  background-color: rgb(52, 14, 95);
+}
