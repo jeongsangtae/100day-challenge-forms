@@ -22,17 +22,25 @@
         <section>
           <h2>How can we help you?</h2>
 
-          <label for="username">Your Name</label>
-          <input type="text" name="user-name" id="username" required />
-          <label for="useremail">Your E-Mail Address</label>
-          <input type="email" name="user-email" id="useremail" required />
-          <label for="userphonenumber">Your Phone Number</label>
-          <input
-            type="number"
-            name="user-phone-number"
-            id="userphonenumber"
-            required
-          />
+          <ul>
+            <li>
+              <label for="username">Your Name</label>
+              <input type="text" name="user-name" id="username" required />
+            </li>
+            <li>
+              <label for="useremail">Your E-Mail Address</label>
+              <input type="email" name="user-email" id="useremail" required />
+            </li>
+            <li>
+              <label for="userphonenumber">Your Phone Number</label>
+              <input
+                type="number"
+                name="user-phone-number"
+                id="userphonenumber"
+                required
+              />
+            </li>
+          </ul>
         </section>
 
         <section>
@@ -52,27 +60,39 @@
         <section>
           <h2>How should we reply?</h2>
 
-          <input type="radio" name="reply" id="reply-phone" value="phone" />
-          <label for="reply-phone">Call me</label>
-          <input type="radio" name="reply" id="reply-email" value="email" />
-          <label for="reply-email">Send me an email</label>
-          <input
-            type="radio"
-            name="reply"
-            id="reply-dontreply"
-            value="reject"
-          />
-          <label for="reply-dontreply">Don't reply</label>
+          <ul>
+            <li class="form-control-inline">
+              <input type="radio" name="reply" id="reply-phone" value="phone" />
+              <label for="reply-phone">Call me</label>
+            </li>
+            <li class="form-control-inline">
+              <input type="radio" name="reply" id="reply-email" value="email" />
+              <label for="reply-email">Send me an email</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="reply"
+                id="reply-dontreply"
+                value="reject"
+              />
+              <label for="reply-dontreply">Don't reply</label>
+            </li>
+          </ul>
         </section>
 
         <section>
-          <input type="checkbox" name="accepterms" id="acceptterms" />
-          <label for="acceptterms">Accept Terms</label>
+          <li class="form-control-inline">
+            <input type="checkbox" name="accepterms" id="acceptterms" />
+            <label for="acceptterms">Accept Terms</label>
+          </li>
         </section>
 
         <section>
-          <button type="reset">Clear</button>
-          <button type="submit">Submit</button>
+          <div class="btn">
+            <button type="reset" class="clear">Clear</button>
+            <button type="submit">Submit</button>
+          </div>
         </section>
       </form>
     </main>
