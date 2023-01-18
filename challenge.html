@@ -34,23 +34,33 @@
             <li>
               <label for="userphonenumber">Your Phone Number</label>
               <input
-                type="number"
+                type="tel"
                 name="user-phone-number"
                 id="userphonenumber"
                 required
+                minlength="11"
+                maxlength="11"
               />
             </li>
+            <li></li>
           </ul>
         </section>
 
         <section>
           <label for="usermassage">Your Message</label>
-          <textarea name="user-massage" id="usermassage" rows="7"></textarea>
+          <textarea
+            name="user-massage"
+            id="usermassage"
+            rows="6"
+            required
+            minlength="10"
+            maxlength="200"
+          ></textarea>
         </section>
 
         <section>
           <label for="findus">How did you find us?</label>
-          <select name="find-us" id="findus">
+          <select name="find-us" id="findus" required>
             <option value="web">Web Search</option>
             <option value="word">Word of Mouth</option>
             <option value="other">Other</option>
@@ -62,30 +72,48 @@
 
           <ul>
             <li class="form-control-inline">
-              <input type="radio" name="reply" id="reply-phone" value="phone" />
+              <input
+                type="radio"
+                name="reply"
+                id="reply-phone"
+                value="phone"
+                required
+              />
               <label for="reply-phone">Call me</label>
             </li>
             <li class="form-control-inline">
-              <input type="radio" name="reply" id="reply-email" value="email" />
+              <input
+                type="radio"
+                name="reply"
+                id="reply-email"
+                value="email"
+                required
+              />
               <label for="reply-email">Send me an email</label>
             </li>
             <li class="form-control-inline">
               <input
                 type="radio"
                 name="reply"
-                id="reply-dontreply"
-                value="reject"
+                id="reply-none"
+                value="none"
+                required
               />
-              <label for="reply-dontreply">Don't reply</label>
+              <label for="reply-none">Don't reply</label>
             </li>
           </ul>
         </section>
 
         <section>
-          <li class="form-control-inline">
-            <input type="checkbox" name="accepterms" id="acceptterms" />
+          <div class="form-control-inline">
+            <input
+              type="checkbox"
+              name="accept-terms"
+              id="acceptterms"
+              required
+            />
             <label for="acceptterms">Accept Terms</label>
-          </li>
+          </div>
         </section>
 
         <section>
