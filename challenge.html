@@ -13,5 +13,68 @@
     <link rel="stylesheet" href="chellenge.css" />
     <title>Form Challenge</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+    <main>
+      <form action="/challenge.html" method="GET">
+        <section>
+          <h2>How can we help you?</h2>
+
+          <label for="username">Your Name</label>
+          <input type="text" name="user-name" id="username" required />
+          <label for="useremail">Your E-Mail Address</label>
+          <input type="email" name="user-email" id="useremail" required />
+          <label for="userphonenumber">Your Phone Number</label>
+          <input
+            type="number"
+            name="user-phone-number"
+            id="userphonenumber"
+            required
+          />
+        </section>
+
+        <section>
+          <label for="usermassage">Your Message</label>
+          <textarea name="user-massage" id="usermassage" rows="7"></textarea>
+        </section>
+
+        <section>
+          <label for="findus">How did you find us?</label>
+          <select name="find-us" id="findus">
+            <option value="web">Web Search</option>
+            <option value="word">Word of Mouth</option>
+            <option value="other">Other</option>
+          </select>
+        </section>
+
+        <section>
+          <h2>How should we reply?</h2>
+
+          <input type="radio" name="reply" id="reply-phone" value="phone" />
+          <label for="reply-phone">Call me</label>
+          <input type="radio" name="reply" id="reply-email" value="email" />
+          <label for="reply-email">Send me an email</label>
+          <input
+            type="radio"
+            name="reply"
+            id="reply-dontreply"
+            value="reject"
+          />
+          <label for="reply-dontreply">Don't reply</label>
+        </section>
+
+        <section>
+          <input type="checkbox" name="accepterms" id="acceptterms" />
+          <label for="acceptterms">Accept Terms</label>
+        </section>
+
+        <section>
+          <button type="reset">Clear</button>
+          <button type="submit">Submit</button>
+        </section>
+      </form>
+    </main>
+  </body>
 </html>
